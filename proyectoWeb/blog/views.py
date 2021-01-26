@@ -18,5 +18,7 @@ def login(request):
     return render(request, 'plantillas/login.html', {})
 
 def post_list(request):
-    return render(request, 'plantillas/post_list.html', {})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'plantillas/post_list.html', {'posts': posts})
+
 
