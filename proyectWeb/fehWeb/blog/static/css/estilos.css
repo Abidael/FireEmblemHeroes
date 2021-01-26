@@ -83,3 +83,10 @@ body{
     flex-direction: column;
     height: 100%;
 }
+
+.container-post{
+    position: relative;
+    margin: auto;
+    max-width: 500px;
+    background-color: white;
+}
