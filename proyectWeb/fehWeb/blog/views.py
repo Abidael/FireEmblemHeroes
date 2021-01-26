@@ -8,9 +8,19 @@ from .models import Post
 def portada(request):
     return render(request, 'plantillas/portada.html', {})
 
+
+def heroes(request):
+    return render(request, 'plantillas/heroes.html', {})
+
+
+def login(request):
+    return render(request, 'plantillas/login.html', {})
+
+
+def formulario(request):
+    return render(request, 'plantillas/questions.html', {})
+
+
 def post_list(request):
     posts = Post.objects.all()
     return render(request, 'plantillas/post_list.html', {'posts': posts})
-
-
-
