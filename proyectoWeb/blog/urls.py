@@ -19,4 +19,8 @@ urlpatterns = [
     
     # localhost:8000/Login
     path('login/', views.login, name='login'),
+
+    # localhost:8000/Post_List
+    path('post_list/', views.post_list, name='post_list'),
+
 ]

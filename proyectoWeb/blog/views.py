@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.utils import timezone
+from .models import Post
+
 
 # Create your views here.
 #Funcion portada, recibe un requerimiento que levanta una plantilla y renderizando.
@@ -13,4 +16,7 @@ def heroes(request):
 
 def login(request):
     return render(request, 'plantillas/login.html', {})
+
+def post_list(request):
+    return render(request, 'plantillas/post_list.html', {})
 
