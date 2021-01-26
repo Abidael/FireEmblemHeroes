@@ -1,0 +1,85 @@
+/* Letras */
+.letras-titulo{
+color: white;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+
+}
+
+.letras-general{
+    position: relative;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    }
+
+.nav-link{
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav.navbar ul.nav li {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-link{
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+/* Fondo */
+.navbar {
+    background-image: url(../Img/Background.jpg);
+}
+
+body{
+    background-image: url(../Img/Full_Portrait_Seliph.png);
+}
+
+/* Responsivo */
+
+.iconoFeh{
+    width:60px;
+    height:60px;
+}
+
+.container-responsivo{
+    position: relative;
+    margin: auto;
+    max-width: 500px;
+}
+
+.margen{
+    margin: 5%;
+    max-width: 1000px;
+    max-height: auto;
+}
+
+@media screen and (max-width: 700px){
+    .letras-general{
+    font-size:12px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .letras-general{
+    font-size:6px;
+    }
+}
+
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
