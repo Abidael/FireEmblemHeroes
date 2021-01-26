@@ -21,6 +21,10 @@ def formulario(request):
     return render(request, 'plantillas/questions.html', {})
 
 
+def publicaciones(request):
+    return render(request, 'plantillas/post_list.html', {})
+
+
 def post_list(request):
     posts = Post.objects.all()
     return render(request, 'plantillas/post_list.html', {'posts': posts})
