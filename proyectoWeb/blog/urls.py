@@ -8,10 +8,15 @@ urlpatterns = [
     # localhost:8000/
     path('', views.portada, name='portada'),
 
+    # localhost:8000/Portada
+    path('portada/', views.portada, name='portada'),
+
     # localhost:8000/Questions
     path('questions/', views.questions, name='questions'),
 
     # localhost:8000/Heroes
     path('heroes/', views.heroes, name='heroes'),
     
+    # localhost:8000/Login
+    path('login/', views.login, name='login'),
 ]

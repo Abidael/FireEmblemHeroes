@@ -16,8 +16,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     #localhost:8000/admin
     path('admin/', admin.site.urls),
+    #localhost:8000/portada
+    path('portada/', include('blog.urls')),
+    #localhost:8000/
+    path('', include('blog.urls')),
 ]
