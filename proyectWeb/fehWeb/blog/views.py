@@ -9,9 +9,13 @@ from .forms import PostForm
 def portada(request):
     return render(request, 'plantillas/portada.html', {})
 
-def post_list(request):
-    posts = Post.objects.all()
-    return render(request, 'plantillas/post_list.html', {'posts': posts})
+
+def heroes(request):
+    return render(request, 'plantillas/heroes.html', {})
+
+
+def login(request):
+    return render(request, 'plantillas/login.html', {})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -35,4 +39,14 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'plantilla/post_edit.html', {'form': form})
 
+def formulario(request):
+    return render(request, 'plantillas/questions.html', {})
 
+
+def publicaciones(request):
+    return render(request, 'plantillas/post_list.html', {})
+
+
+def post_list(request):
+    posts = Post.objects.all()
+    return render(request, 'plantillas/post_list.html', {'posts': posts})
