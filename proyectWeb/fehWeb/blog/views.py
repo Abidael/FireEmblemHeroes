@@ -3,6 +3,16 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 
+from rest_framework import viewsets
+from .serializers import PostSerializers
+
+from urllib.request import urlopen
+import json
+
+
+class postViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializers
 
 # Create your views here.
 
@@ -24,7 +34,11 @@ def formulario(request):
 
 def post_list(request):
     posts = Post.objects.all()
-    return render(request, 'plantillas/post_list.html', {'posts': posts})
+    url = "https://api.gael.cl/general/public/monedas/UF"
+    datos = urlopen(url).read()
+    moneda = json.loads(datos)
+    valor = moneda["Valor"]
+    return render(request, 'plantillas/post_list.html', {'posts': posts, 'valorUF': valor})
 
 
 def post_detail(request, pk):

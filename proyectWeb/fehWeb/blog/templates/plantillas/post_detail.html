@@ -2,13 +2,13 @@
 
 {% block content %}
     <div class="post">
-    <a class="btn btn-danger" href="{% url 'post_new' %}"> Nuevo Post !<span class="glyphicon glyphicon-pencil"></span></a>
+    <a class="btn btn-danger" href="{% url 'post_new' %}">New Post<span class="glyphicon glyphicon-pencil"></span></a>
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
             </div>
         {% endif %}
-        <a class="btn btn-danger" href="{% url 'post_edit' pk=post.pk %}"> Editame !<span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-danger" href="{% url 'post_edit' pk=post.pk %}">Edit Post<span class="glyphicon glyphicon-pencil"></span></a>
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
