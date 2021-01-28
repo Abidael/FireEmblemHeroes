@@ -49,12 +49,12 @@
     </header>
 
     <Section class="container">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="login">
             <div class="login-screen">
                 <div class="app-title">
@@ -62,18 +62,26 @@
                 </div>
 
                 <div class="login-form">
-                    <div class="control-group">
-                        <input type="text" class="login-field" value="" placeholder="username" id="login-name">
-                        <label class="login-field-icon fui-user" for="login-name"></label>
-                    </div>
+                    <!-- Formulario -->
+                    <form method="POST"  >
+                        {% csrf_token %}
+                        <!-- Nombre de usuario -->
+                        <div class="control-group">
+                            <input type="text" class="login-field" value="" placeholder="username" name="username">
+                            <label class="login-field-icon fui-user" for="login-name"></label>
+                        </div>
 
-                    <div class="control-group">
-                        <input type="password" class="login-field" value="" placeholder="password" id="login-pass">
-                        <label class="login-field-icon fui-lock" for="login-pass"></label>
-                    </div>
+                        <!-- Contraseña -->
+                        <div class="control-group">
+                            <input type="password" class="login-field" value="" placeholder="password" name="password" >
+                            <label class="login-field-icon fui-lock" for="login-pass"></label>
+                        </div>
 
-                    <a class="btn btn-primary btn-large btn-block" href="#">login</a>
-                    <a class="login-link" href="#">Lost your password?</a>
+                        <button class="btn btn-primary btn-large btn-block" type="submit" value="login" >Login</button>
+                    </form>                    
+
+                    <!-- Botón de Login -->
+                    <a class="login-link" href="#">Lost your password?</a> <!-- Recuperacion de contraseña -->
                 </div>
             </div>
         </div>

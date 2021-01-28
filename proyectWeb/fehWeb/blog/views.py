@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from django.contrib.auth import login, logout, authenticate
 from .models import Post
 from .forms import PostForm
 
@@ -15,7 +16,7 @@ def heroes(request):
 
 
 def login(request):
-    return render(request, 'plantillas/login.html', {})
+    return render(request, 'registration/login.html', {})
 
 
 def formulario(request):
@@ -31,6 +32,7 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'plantillas/post_detail.html', {'post': post})
 
+
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -43,6 +45,7 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'plantillas/post_edit.html', {'form': form})
+
 
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -57,3 +60,8 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'plantillas/post_edit.html', {'form': form})
+
+def logout_request(request):
+    logout(request)    
+    return render(request, 'plantillas/portada.html', {})
+ 
