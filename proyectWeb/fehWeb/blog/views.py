@@ -63,5 +63,5 @@ def post_edit(request, pk):
 
 def logout_request(request):
     logout(request)    
-    return render(request, 'plantillas/portada.html', {})
+    return redirect('/')
  
