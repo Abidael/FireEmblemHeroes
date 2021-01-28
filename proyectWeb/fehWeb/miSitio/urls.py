@@ -21,3 +21,33 @@ urlpatterns = [
     path('', include('blog.urls')),
 ]
 
+LOGIN_REDIRECT_URL = "/"
+
+AUTHENTICATION_BACKENDS = [
+    'social.core.backends.facebook.FacebookOMuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+PWA_APP_NAME = "EJEMPLOCLASE"
+PWA_APP_DESCRIPTION = "PAGINA QUE NO ES DE JUEGO"
+PWA_APP_THEME_COLOR = "#FE350A"
+PWA_APP_BACKGROUND_COLOR = "#45FE0A"
+
+#Android
+PWA_APP_ICONS =[
+    {
+        "scr": "/",
+        "sizes":"160x160"
+    }
+]
+
+#Apple
+PWA_APP_ICONS_APPLE =[
+    {
+        "scr": "/",
+        "sizes":"160x160"
+    }
+]
+
+
+
