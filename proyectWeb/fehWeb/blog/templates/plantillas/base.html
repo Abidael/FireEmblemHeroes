@@ -37,11 +37,18 @@
                         <a class="nav-link" href="/questions">Contact us</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/login">Inicio de Sesión</a>
+                        <a class="nav-link" href="/post_list">Posts</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-link"> User: {{ user.get_username }} </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/post_list">Publicaciones</a>
+                        <a class="nav-link" href="{% url 'logout'%}">Log Out</a>
                     </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/login">Log In</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

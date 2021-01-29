@@ -38,11 +38,18 @@
                         <a class="nav-link" href="/questions">Contact us</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="">Inicio de Sesión</a>
-                    </li>
+                        <a class="nav-link" href="/post_list">Posts</a>
+                    </li>                    
+                    {% if user.is_authenticated %}
+                    <li class="nav-link"> User: {{ user.get_username }} </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/post_list">Publicaciones</a>
+                        <a class="nav-link" href="{% url 'logout'%}">Log Out</a>
                     </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/login">Log In</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -63,21 +70,21 @@
 
                 <div class="login-form">
                     <!-- Formulario -->
-                    <form method="POST"  >
+                    <form method="POST" action="{% url 'login' %}" >
                         {% csrf_token %}
                         <!-- Nombre de usuario -->
                         <div class="control-group">
-                            <input type="text" class="login-field" value="" placeholder="username" name="username">
+                            <input type="text" class="login-field" value="" placeholder="Username" name="username">
                             <label class="login-field-icon fui-user" for="login-name"></label>
                         </div>
 
                         <!-- Contraseña -->
                         <div class="control-group">
-                            <input type="password" class="login-field" value="" placeholder="password" name="password" >
+                            <input type="password" class="login-field" value="" placeholder="Password" name="password" >
                             <label class="login-field-icon fui-lock" for="login-pass"></label>
                         </div>
 
-                        <button class="btn btn-primary btn-large btn-block" type="submit" value="login" >Login</button>
+                        <button class="btn btn-primary btn-large btn-block" type="submit" value="login">Login</button>
                     </form>                    
 
                     <!-- Botón de Login -->

@@ -61,7 +61,22 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'plantillas/post_edit.html', {'form': form})
 
+
 def logout_request(request):
-    logout(request)    
+    logout(request)
     return redirect('/')
- 
+
+
+def login_request(request):
+    form = AuthenticationForm()
+    if request.method == "POST":
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            username = 'pepe'
+            password = '123'
+
+            user = authenticate(username=username, password=password)
+
+            if user is not None:
+                do_login(request, user)
+                return redirect('/')
