@@ -16,6 +16,10 @@ class postViewSet(viewsets.ModelViewSet):
 
 # Create your views here.
 
+def error_facebook(request):
+    return render(request, 'registration/error_facebook.html')
+
+
 def portada(request):
     return render(request, 'plantillas/portada.html', {})
 
