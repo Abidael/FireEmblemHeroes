@@ -17,5 +17,5 @@ urlpatterns = [
     path('post/new', views.post_new, name='post_new'),
     path('post/<int:pk>/edit', views.post_edit, name='post_edit'),
     path('api/', include(router.urls)),
-    path('error-facebook/', views.error_facebook, name='error_facebook'),
+    path('error_facebook/', views.error_facebook, name='error_facebook'),
 ]
