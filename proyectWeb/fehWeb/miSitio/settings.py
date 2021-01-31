@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog', # Pagina Web
     'rest_framework',
+    'social_django',
 ]
 
 MIDDLEWARE = [
