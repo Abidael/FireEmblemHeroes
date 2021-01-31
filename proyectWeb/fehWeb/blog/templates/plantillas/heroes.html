@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <header>
         <!-- Nav en el Header -->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -39,10 +38,20 @@
                         <a class="nav-link" href="/questions">Contact us</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/login">Login</a>
-                    </li>
-                    <li class="nav-item active">
                         <a class="nav-link" href="/post_list">Posts</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item" style="color: yellow;">User: {{ user.get_username }}</li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">Login</a>
+                    </li>
+                    {% endif%}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
                     </li>
                 </ul>
             </div>
