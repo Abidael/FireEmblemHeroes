@@ -47,11 +47,12 @@ def save_form(request):
 
 def post_list(request):
     posts = Post.objects.all()
-    url = "https://api.gael.cl/general/public/monedas/UF"
+    url = "https://api.gael.cl/general/public/clima/SCFA"
     datos = urlopen(url).read()
-    moneda = json.loads(datos)
-    valor = moneda["Valor"]
-    return render(request, 'plantillas/post_list.html', {'posts': posts, 'jugadores': valor})
+    clima = json.loads(datos)
+    temp = clima["Temp"]
+    estado = clima["Estado"]
+    return render(request, 'plantillas/post_list.html', {'posts': posts, 'estados': estado, 'temps': temp})
 
 
 def post_detail(request, pk):

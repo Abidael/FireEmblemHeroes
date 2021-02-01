@@ -23,7 +23,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
+   path('accounts/', include('django.contrib.auth.urls')),    
 ]
 
 LOGIN_REDIRECT_URL = "/"
