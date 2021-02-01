@@ -59,37 +59,29 @@
     </header>
 
     <!-- formulario -->
+
     <div class="container">
-        <form id="contact-form" name="contact-form" class="text-center p-5" action="#" method="POST">
+        <form id="form" class="text-center p-5" action="{% url 'save_form' %}" method="POST">
+            {% csrf_token %}
 
             <p class="h4 mb-4 letras-titulo">Contact us</p>
 
             <!-- Email -->
-            <input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail">
+            <input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail" required>
 
             <!-- Nombre -->
-            <input type="text" id="name" name="name" class="form-control mb-4" placeholder="Name">
+            <input type="text" id="name" name="name" class="form-control mb-4" placeholder="Name" required>
 
             <!-- Movil -->
-            <input type="text" id="phone" name="phone" class="form-control mb-4" placeholder="Phone">
+            <input type="text" id="phone" name="phone" class="form-control mb-4" placeholder="Phone" required>
 
             <!-- Mensaje -->
             <div class="form-group">
-                <textarea name="message" class="form-control rounded-0" id="message" rows="3"
-                    placeholder="Message"></textarea>
+                <textarea name="message" class="form-control rounded-0" id="message" rows="3" placeholder="Message"
+                    required></textarea>
             </div>
-
-            <!-- Copia -->
-            <div class="custom-control custom-checkbox mb-4">
-                <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-                <label class="custom-control-label letras-general" for="defaultContactFormCopy">Send me a copy of this
-                    message</label>
-            </div>
-
             <!--  Boton de enviar -->
-            <button class="btn btn-info btn-block" onclick="validateForm()">Send</button>
-            <div class="status letras-general"></div>
-
+            <button type="submit" class="btn btn-info btn-block">Send</button>
         </form>
     </div>
 

@@ -17,3 +17,9 @@ def publish(self):
 
 def __str__(self):
     return self.title
+
+class QuestionsPost(models.Model):
+    email = models.EmailField()
+    name = models.CharField(max_length=20)
+    phone = models.CharField(max_length=12)
+    message = models.TextField()

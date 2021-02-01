@@ -9,11 +9,13 @@ from .serializers import PostSerializers
 from urllib.request import urlopen
 import json
 
+
 class postViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializers
 
 # Create your views here.
+
 
 def error_facebook(request):
     return render(request, 'plantillas/error_facebook.html')
@@ -35,6 +37,13 @@ def formulario(request):
     return render(request, 'plantillas/questions.html', {})
 
 
+def save_form(request):
+    if request.method == "POST":
+        return render(request, 'plantillas/questions.html', {})
+    else:
+        return render(request, 'plantillas/questions.html', {})
+
+
 def post_list(request):
     posts = Post.objects.all()
     url = "https://api.gael.cl/general/public/monedas/UF"
@@ -47,6 +56,7 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'plantillas/post_detail.html', {'post': post})
+
 
 def post_new(request):
     if request.method == "POST":
@@ -61,6 +71,7 @@ def post_new(request):
         form = PostForm()
     return render(request, 'plantillas/post_edit.html', {'form': form})
 
+
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -74,5 +85,3 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'plantillas/post_edit.html', {'form': form})
-
-
