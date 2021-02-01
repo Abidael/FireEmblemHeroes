@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'blog', # Pagina Web
     'rest_framework',
     'social_django',
+    'pwa'
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LOGIN_REDIRECT_URL = '/'
+
+pwa_app_name = "FireEmblemHeroes"
+pwa_app_descripcion = "Pagina Informativa de FireEmblem"
+pwa_app_theme_color ="#FE350A"     
+pwa_app_background_color ="#45FE0A"
