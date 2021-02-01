@@ -31,6 +31,14 @@
     </div>
 </form>
 
+<a class="nav-link" href="{% url 'social:begin' 'facebook' %}">
+<button>
+    Login with Facebook
+</button>
+</a>
+
+
+
 {# Assumes you setup the password_reset view in your URLconf #}
 <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 {% endblock %}
