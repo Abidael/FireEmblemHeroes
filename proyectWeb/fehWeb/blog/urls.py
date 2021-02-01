@@ -13,7 +13,7 @@ urlpatterns = [
     path('heroes/', views.heroes),
     path('login/', views.login),
     path('questions/', views.formulario),
-    path('questions2/', views.save_form, name='save_form'),
+    path('formPost/', views.save_form, name='save_form'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new', views.post_new, name='post_new'),
     path('post/<int:pk>/edit', views.post_edit, name='post_edit'),

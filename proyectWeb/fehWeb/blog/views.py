@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Post
+from .models import Post, QuestionsPost
 from .forms import PostForm
 
 from rest_framework import viewsets
@@ -39,6 +39,7 @@ def formulario(request):
 
 def save_form(request):
     if request.method == "POST":
+        
         return render(request, 'plantillas/questions.html', {})
     else:
         return render(request, 'plantillas/questions.html', {})
