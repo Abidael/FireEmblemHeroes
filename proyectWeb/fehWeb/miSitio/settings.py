@@ -142,7 +142,24 @@ AUTHENTICATION_BACKENDS = [
 
 LOGIN_REDIRECT_URL = '/'
 
-pwa_app_name = "FireEmblemHeroes"
-pwa_app_descripcion = "Pagina Informativa de FireEmblem"
-pwa_app_theme_color ="#FE350A"     
-pwa_app_background_color ="#45FE0A"
+PWA_APP_NAME = "FireEmblemHeroes"
+PWA_APP_DESCRIPTION = "Pagina Informativa de FireEmblem"
+PWA_APP_THEME_COLOR ="#FE350A"     
+PWA_APP_BACKGROUND_COLOR ="#45FE0A"
+
+# ANDROID
+PWA_APP_ICONS = [
+    {
+        "scr": "/static/Img/FEH_icon.png",
+        "sizes":"160x160"
+    }
+]
+
+# APPLE
+PWA_APP_ICONS_APPLE = [
+    {
+        "scr": "/static/Img/FEH_icon.png",
+        "sizes":"160x160"
+    }
+]
+

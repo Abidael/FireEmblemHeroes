@@ -34,23 +34,23 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-PWA_APP_NAME = "EJEMPLOCLASE"
-PWA_APP_DESCRIPTION = "PAGINA QUE NO ES DE JUEGO"
-PWA_APP_THEME_COLOR = "#FE350A"
-PWA_APP_BACKGROUND_COLOR = "#45FE0A"
+WA_APP_NAME = "FireEmblemHeroes"
+PWA_APP_DESCRIPTION = "Pagina Informativa de FireEmblem"
+PWA_APP_THEME_COLOR ="#FE350A"     
+PWA_APP_BACKGROUND_COLOR ="#45FE0A"
 
-#Android
-PWA_APP_ICONS =[
+# ANDROID
+PWA_APP_ICONS = [
     {
-        "scr": "/",
+        "scr": "/static/Img/FEH_icon.png",
         "sizes":"160x160"
     }
 ]
 
-#Apple
-PWA_APP_ICONS_APPLE =[
+# APPLE
+PWA_APP_ICONS_APPLE = [
     {
-        "scr": "/",
+        "scr": "/static/Img/FEH_icon.png",
         "sizes":"160x160"
     }
 ]
