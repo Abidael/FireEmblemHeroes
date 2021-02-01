@@ -26,6 +26,8 @@ urlpatterns += [
    path('accounts/', include('django.contrib.auth.urls')),    
 ]
 
+LOGIN_REDIRECT_URL = '/'
+
 AUTHENTICATION_BACKENDS = [
     'social.core.backends.facebook.FacebookOMuth2',
     'django.contrib.auth.backends.ModelBackend',

@@ -18,7 +18,7 @@ class postViewSet(viewsets.ModelViewSet):
 
 
 def error_facebook(request):
-    return render(request, 'plantillas/error_facebook.html')
+    return render(request, 'registration/error_facebook.html')
 
 
 def portada(request):
