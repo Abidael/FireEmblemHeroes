@@ -33,6 +33,7 @@ SOCIAL_AUTH_FACEBOOK_SECRET = "59750b298ad5cbbc307d71a4d2bc703f"
 SOCIAL_AUTH_RAISE_EXCEPTIONS = False
 LOGIN_ERROR_URL = '/error-facebook/'
 
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] 
 
 # Application definition
 
