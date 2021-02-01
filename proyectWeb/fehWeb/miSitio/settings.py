@@ -25,10 +25,13 @@ SECRET_KEY = 'u(*$+*yqdn*_i(d!a5%**15p=w0q!#sb!20azo459+k!p*dy6f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 SOCIAL_AUTH_FACEBOOK_KEY = "845606896220970"
 SOCIAL_AUTH_FACEBOOK_SECRET = "59750b298ad5cbbc307d71a4d2bc703f"
+
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+LOGIN_ERROR_URL = '/error-facebook/'
 
 
 # Application definition
@@ -75,25 +78,6 @@ TEMPLATES = [
         },
     },
 ]
-
-
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
-
-SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-    'fields': 'id, name, email, picture.type(large), link'
-}
-
-SOCIAL_AUTH_FACEBOOK_EXTRA_DATA =[
-    ('name', 'name'),
-    ('email', 'email'),
-    ('picture', 'picture'),
-    ('link', 'profile_url'),
-]
-
-
-
-
-
 
 
 WSGI_APPLICATION = 'miSitio.wsgi.application'

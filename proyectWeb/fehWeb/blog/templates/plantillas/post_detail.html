@@ -2,7 +2,6 @@
 
 {% block content %}
     <div class="post">
-    <a class="btn btn-danger" href="{% url 'post_new' %}">New Post<span class="glyphicon glyphicon-pencil"></span></a>
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
