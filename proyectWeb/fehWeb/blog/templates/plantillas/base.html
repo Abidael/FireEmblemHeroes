@@ -48,10 +48,10 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">Login</a>
                     </li>
-                    {% endif%}
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+                            <a class="nav-link" href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
                     </li>
+                    {% endif%}
                 </ul>
             </div>
         </nav>

@@ -9,7 +9,6 @@ from .serializers import PostSerializers
 from urllib.request import urlopen
 import json
 
-
 class postViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializers
@@ -42,7 +41,7 @@ def post_list(request):
     datos = urlopen(url).read()
     moneda = json.loads(datos)
     valor = moneda["Valor"]
-    return render(request, 'plantillas/post_list.html', {'posts': posts, 'valorUF': valor})
+    return render(request, 'plantillas/post_list.html', {'posts': posts, 'jugadores': valor})
 
 
 def post_detail(request, pk):
@@ -75,3 +74,5 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'plantillas/post_edit.html', {'form': form})
+
+
