@@ -87,3 +87,4 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'plantillas/post_edit.html', {'form': form})
+ 

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
     {% load pwa %} {% progressive_web_app_meta %}
     <link rel="stylesheet" href="../../static/css/estilos.css">
-    <link rel="shortcut icon" href="../../static/Img/FEH_icon.png"/>
+    <link rel="shortcut icon" href="../../static/Img/FEH_icon.png" />
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -50,9 +50,17 @@
                     {% else %}
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">Login</a>
-                    </li>                    
+                    </li>
                     {% endif%}
                 </ul>
+            </div>
+            <img class="iconoFeh" src="../../static/Img/googlePlayIcon.png" alt="Responsive image">
+            <div>
+                <li class="nav-item active">
+                    <a class="nav-link"
+                        href="https://play.google.com/store/apps/details?id=com.nintendo.zaba&hl=es_CL&gl=US">Download
+                        Game</a>
+                </li>
             </div>
         </nav>
     </header>
