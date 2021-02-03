@@ -1,21 +1,28 @@
 /* Letras */
-.letras-titulo{
-color: white;
-text-align: center;
-font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Mono', monospace;
+.letras-titulo {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 
 }
 
-.letras-general{
+.letras-general {
     position: relative;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
-    }
+}
 
-.nav-link{
+.letras-footer {
+    color: yellow;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-link {
     color: white !important;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Mono', monospace;
@@ -26,7 +33,7 @@ nav.navbar ul.nav li {
     font-family: 'Roboto Mono', monospace;
 }
 
-.nav-link{
+.nav-link {
     color: white !important;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Mono', monospace;
@@ -38,53 +45,53 @@ nav.navbar ul.nav li {
     background-image: url(../Img/Background.jpg);
 }
 
-body{
+body {
     background-image: url(../Img/Background.jpg);
 }
 
 /* Responsivo */
 
-.iconoFeh{
-    width:60px;
-    height:60px;
+.iconoFeh {
+    width: 60px;
+    height: 60px;
 }
 
-.container-responsivo{
+.container-responsivo {
     position: relative;
     margin: auto;
     max-width: 500px;
 }
 
-.margen{
+.margen {
     margin: 5%;
     max-width: 1000px;
     max-height: auto;
 }
 
-@media screen and (max-width: 700px){
-    .letras-general{
-    font-size:12px;
+@media screen and (max-width: 700px) {
+    .letras-general {
+        font-size: 12px;
     }
 }
 
-@media screen and (max-width: 400px){
-    .letras-general{
-    font-size:6px;
+@media screen and (max-width: 400px) {
+    .letras-general {
+        font-size: 6px;
     }
 }
 
 
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.container-post{
+.container-post {
     position: relative;
     margin: auto;
     max-width: 500px;
