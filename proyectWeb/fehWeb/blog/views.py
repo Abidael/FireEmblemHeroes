@@ -22,7 +22,12 @@ def error_facebook(request):
 
 
 def portada(request):
-    return render(request, 'plantillas/portada.html', {})
+    url = "https://api.gael.cl/general/public/monedas/USD"
+    datos = urlopen(url).read()
+    moneda = json.loads(datos)
+    nombre = moneda["Nombre"]
+    valor = moneda["Valor"]
+    return render(request, 'plantillas/portada.html', {'nombre': nombre, 'valorUSD': valor})
 
 
 def heroes(request):
